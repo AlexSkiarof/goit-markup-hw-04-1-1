@@ -573,10 +573,18 @@
   background: #2f303a;
 }
 
+.footer1 {
+  background: #2f303a;
+}
+
 .flex-footer {
   width: 1230px;
   display: flex;
   flex-wrap: wrap;
+}
+
+.logo-footer {
+  margin-top: 9px;
 }
 
 .footer1 .logo {
@@ -603,8 +611,9 @@
 }
 
 .footer-adress-contact {
-  margin: 0;
+  margin-bottom: 20px;
 }
+
 .social-list-footer {
   display: flex;
   padding: 0;
@@ -619,6 +628,7 @@
 
 .header-adress-footer {
   padding-left: 0;
+  margin-bottom: 20px;
 }
 
 /*==================PORTFOLIO==========================================*/
