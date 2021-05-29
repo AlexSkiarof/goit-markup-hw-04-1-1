@@ -370,7 +370,7 @@ body {
   height: 120px;
   margin: 0 auto;
   background-color: white;
-  background-image: url(/img/bacgroung_img/clock\ 1.svg),
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/31e82a4c8d093db16b639b5758918b878b9bc026/img/bacgroung_img/clock%201.svg),
     linear-gradient(#f5f4fa, #f5f4fa);
   background-position: center;
   background-repeat: no-repeat;
