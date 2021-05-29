@@ -1,0 +1,792 @@
+:root {
+  --accent-color: #2196f3;
+}
+/* обнуляем заданные браузером отступы*/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.img {
+  display: block;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+}
+
+.ul,
+.li,
+.list {
+  list-style: none;
+}
+
+/*====его дети и предки будут наследовать этот шрифт,
+а стайл это стн размер ====*/
+/*=================HEADER============*/
+.header-adress {
+  display: flex;
+  width: 333px;
+  justify-content: space-between;
+}
+
+/*сброс подчеркивания ссылок*/
+
+.link {
+  text-decoration: none;
+}
+
+.link-titel {
+  display: block;
+  /* padding-top: 30px; */
+  /* padding-bottom: 32px; */
+}
+
+/*чтобі все картинки сделали блочными без зазора в 4px*/
+
+.titel-style {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+
+  margin: 0;
+  color: #000000;
+}
+.titel-style-color {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+
+  color: #2196f3;
+}
+/*сброс для адресса,т.к. в браузере он по умолчанию стоит италк-с наклоном*/
+.adress {
+  font-style: normal;
+}
+/*настройка верхнего блока навигации*/
+/*стиль телефона вверхней панели*/
+.navigation-list-link,
+.header-mail-link {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+
+  color: #212121;
+}
+
+.header-mail-link {
+  display: flex;
+  align-items: center;
+  /* padding-top: 30px; */
+  /* padding-bottom: 32px; */
+}
+
+.header-tel-link {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.1px;
+  letter-spacing: 0.02em;
+
+  color: #757575;
+  display: flex;
+  align-items: center;
+}
+
+.container {
+  /* width: 1200px; */
+  padding: 0 15px;
+  margin: 0 auto;
+}
+/*dicplay: flex - надо здать каждому эллементу как блоку так и его подразделам*/
+.header .container {
+  padding: 0 15px;
+  display: flex;
+
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+  width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid #ececec;
+}
+.header .adress {
+  margin-left: auto;
+  margin-right: 10px;
+  /* padding-top: 30px; */
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.navigation-list {
+  display: flex;
+  align-items: center;
+  /* padding-top: 45px; */
+  /* margin-left: 93px; */
+}
+
+.navigation .logo {
+  margin-right: 93px;
+  /* margin: auto; */
+}
+/*последним лишкам мы марджины обнуляем*/
+.navigation-list-item:not(:last-child) {
+  margin-right: 50px;
+}
+/*===================================BODY=======================*/
+.hero {
+  height: 600px;
+}
+.hero .container {
+  /*делаем затемнение с помощью градиента   */
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../img/hero/bg.jpg");
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* width: 1600px; */
+  /* height: 600px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* настройки кнопки*/
+.modal-button {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.8;
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  /*из-за разности отображения шрифтов, падинги лучше делать чуть меньше если как на макете в одну строчку не влазит*/
+  width: 200px;
+  min-height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 28px;
+  padding-right: 28px;
+
+  background: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+/*ставим ховер чтобы выделялся при наведении, и форкус если эллемент интерактивный,
+ а ниже цвет который должен преобретать*/
+.navigation-list-link:hover,
+.navigation-list-link:focus,
+.navigation-list-link:active,
+.header-tel-link:hover,
+.header-tel-link:focus,
+.header-mail-link:hover,
+.header-mail-link:focus {
+  color: #2196f3;
+}
+.active {
+  color: var(--accent-color);
+}
+
+/*позаголовки блока №2*/
+/*text-transform: uppercase; --это когда все буквы надо сделать заглавными*/
+.subtitel {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #212121;
+}
+/*описание блоков №2*/
+.description {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.social-mail-svg {
+  height: 16px;
+  width: 12px;
+}
+
+.header-mail-link::before {
+  display: inline-block;
+  content: "";
+  width: 16px;
+  height: 12px;
+  background-color: #ffffff;
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/45c2864b816016ab84119f06dfac234829e5fe8d/img/bacgroung_img/envelope.svg);
+  color: #757575;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+.header-tel-link::before {
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 16px;
+  background-color: #ffffff;
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/45c2864b816016ab84119f06dfac234829e5fe8d/img/bacgroung_img/Vector.svg);
+  color: #757575;
+  flex-shrink: 0;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-right: 10px;
+  background-repeat: no-repeat;
+}
+
+.hero-titel {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.3;
+  width: 700px;
+  margin-bottom: 30px;
+
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+.subtitle-description {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: #212121;
+}
+
+.description-block .container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-description {
+  width: 1230px;
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+/* .subtitel-description-item:not(last-child) {
+  margin-right: 30px;
+} */
+.subtitel-description-list {
+  display: flex;
+  align-items: center;
+  height: 440px;
+}
+
+.subtitel {
+  /*display: flex;*/
+  margin-bottom: 10px;
+  margin-top: 30px;
+}
+
+.subtitel-description-item {
+  /* margin-bottom: 94px;
+  margin-top: 94px; */
+  margin: 0px 15px;
+}
+/*=====================ABOUT US=======================*/
+
+.subtitel_svg1::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/45c2864b816016ab84119f06dfac234829e5fe8d/img/bacgroung_img/antenna%201.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitel_svg2::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/45c2864b816016ab84119f06dfac234829e5fe8d/img/bacgroung_img/astronaut%201.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitel_svg3::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/31e82a4c8d093db16b639b5758918b878b9bc026/img/bacgroung_img/clock%201.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.subtitel_svg4::before {
+  display: block;
+  content: "";
+  width: 270px;
+  height: 120px;
+  margin: 0 auto;
+  background-color: white;
+  background-image: url(https://raw.githubusercontent.com/AlexSkiarof/goit-markup-hw-04-1-1/45c2864b816016ab84119f06dfac234829e5fe8d/img/bacgroung_img/diagram%201.svg),
+    linear-gradient(#f5f4fa, #f5f4fa);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.gallery .container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-gallery {
+  width: 1230px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+}
+
+.gallery-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+.gallery-list {
+  display: flex;
+}
+.subtitle-description {
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*====================ABOUT COMMAND==================*/
+.command {
+  background-color: #f5f4fa;
+}
+
+.command .container {
+  display: flex;
+  /* background-color: #f5f4fa; */
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+}
+
+.flex-subtitel {
+  width: 1230px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-list {
+  display: flex;
+}
+
+.about-person-item {
+  margin-bottom: 94px;
+}
+
+.about-person-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.regular-customers .container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #ffffff;
+  margin-top: 64px;
+  margin-bottom: 94px;
+}
+
+/* .flex-regular {
+  width: 1230px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 64px;
+} */
+.regular-customers-list {
+  display: flex;
+  padding: 0;
+  justify-content: space-between;
+}
+
+/* .regular-customers-list-item {
+  margin-bottom: 94px;
+} */
+
+.regular-customers-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 170px;
+  height: 90px;
+  background-color: #ffffff;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  padding: 0;
+}
+
+.social-list-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+
+.social-list-item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.regular-customers-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.social-list-link:hover .social-list-svg {
+  fill: #ffffff;
+}
+.regular-customers-list-link:hover .regular-customers-list-svg {
+  fill: #ffffff;
+}
+
+.social-list-link:hover {
+  background-color: #2196f3;
+}
+
+.regular-customers-list-link:hover {
+  background-color: #2196f3;
+}
+
+.social-list-svg {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+
+.regular-customers-list-svg {
+  width: 170px;
+  height: 60px;
+}
+
+.about-person-content {
+  padding-top: 30px;
+  padding-bottom: 29px;
+  padding-right: 30px;
+  padding-left: 32px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.about-person-name {
+  font-family: "Roboto";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+
+  color: #212121;
+}
+.about-profession {
+  font-family: "Roboto";
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 16px;
+
+  color: #757575;
+}
+
+.contact-list-link {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.7;
+  letter-spacing: 0.03em;
+
+  color: rgba(0, 0, 0, 0.6);
+}
+.link-color {
+  color: #ffffff;
+}
+
+/*==================FOOTER================*/
+
+.footer {
+  display: flex;
+  width: 1230px;
+  padding-top: 72px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  background: #2f303a;
+}
+
+.footer1 {
+  background: #2f303a;
+}
+
+.flex-footer {
+  width: 1230px;
+  display: flex;
+}
+
+.footer1 .logo {
+  margin-top: 60px;
+  margin-bottom: 20px;
+}
+.welcam {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.1;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.footer1 .container {
+  margin: 0;
+  margin-left: 70px;
+}
+
+.footer-adress-contact {
+  margin-bottom: 20px;
+}
+
+.social-list-footer {
+  display: flex;
+  padding: 0;
+}
+.contact-list-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.contact-list-item {
+  margin-right: auto;
+}
+
+.header-adress-footer {
+  padding-left: 0;
+  margin-bottom: 20px;
+}
+
+/*==================PORTFOLIO==========================================*/
+
+.hero-portfolio {
+  margin-top: 65px;
+}
+.modal-button-list {
+  display: flex;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  padding-bottom: 70px;
+}
+.gallery-portfolio-list {
+  display: flex;
+}
+
+.modal-button-list {
+  font-size: 0;
+}
+
+.gallery-portfolio .container {
+  width: 1230px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.flex-container {
+  width: 1230px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery-portfolio-item {
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.gallery-portfolio-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.gallery-portfolio-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
+.content-portfolio-name {
+  margin-bottom: 4px;
+  margin-top: 20px;
+}
+
+.gallery-discription {
+  margin-bottom: 20px;
+}
+
+.modal-button-item {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.6;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 6px 22px;
+  cursor: pointer;
+
+  height: 38px;
+
+  background: #f5f4fa;
+  border-radius: 4px;
+  border-color: #ffffff;
+}
+
+.modal-button-item:hover,
+.modal-button-item:focus {
+  background-color: #2196f3;
+
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
+  color: #ffffff;
+}
+
+.content-portfolio-name {
+  font-family: "Roboto";
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 2;
+  /* identical to box height, or 200% */
+
+  letter-spacing: 0.06em;
+
+  color: #212121;
+}
+.gallery-discription {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.8;
+  letter-spacing: 0.03em;
+
+  color: #757575;
+}
+
+.portfolio-list-content {
+  padding-top: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+  /*обводки карточек*/
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+
+.gallery-portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.content-portfolio-name {
+  margin-bottom: 4px;
+}
+
+.gallery {
+  display: flex;
+}
+.gallery-discription {
+  display: flex;
+  margin: 0;
+}
